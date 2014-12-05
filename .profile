@@ -18,7 +18,8 @@ export LS_COLORS="di=36;1:ln=95;1:ex=32;1:*~=94;1:*.rb=32;1:*.py=93;1"
 alias ls='gls -ohFX --color=auto --group-directories-first'
 
 # Various git aliases
-alias gs='git status '
+alias rm='rm -i'
+alias gst='git status '
 alias ga='git add '
 alias gb='git branch '
 alias gc='git commit'
