@@ -3,9 +3,14 @@
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+# use the git script to get the branch name in the prompt
+source ~/.git-prompt.sh
+
 # Change the color/look of prompt
 #export PS1='\h:\W\$ '
-export PS1='\[\e[0;35m\]\u\[\e[m\] \[\e[1;36m\]\w\[\e[m\] \[\e[1;92m\]\$>\[\e[m\] \[\e[1;0m\]'
+export PS1='\[\e[0;35m\]\u\[\e[m\] \[\e[1;36m\]\w\[\e[m\] \[$(__git_ps1 "<%s>") \[\e[1;92m\]\$>\[\e[m\] \[\e[1;0m\]'
+
+# PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
 # My ls alias
 # alias ls='ls -lh'
