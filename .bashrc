@@ -3,5 +3,8 @@
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+### This is a thing for android-sdk stuff
+export ANDROID_HOME=/usr/local/opt/android-sdk
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
