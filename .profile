@@ -6,9 +6,16 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # use the git script to get the branch name in the prompt
 source ~/.git-prompt.sh
 
+# hg-prompt for using mercurial
+hg_ps1() {
+    hg prompt "{{branch}}{ at {bookmark}}{status}" 2> /dev/null
+}
+
 # Change the color/look of prompt
 #export PS1='\h:\W\$ '
-export PS1='\[\e[0;35m\]\u\[\e[m\] \[\e[1;36m\]\w\[\e[m\] \[$(__git_ps1 "<%s>") \[\e[1;92m\]\$>\[\e[m\] \[\e[1;0m\]'
+export PS1='\[\e[0;35m\]\u\[\e[m\] \[\e[1;36m\]\w\[\e[m\] \[$(__git_ps1 "<git:%s>") <hg:$(hg_ps1)> \n\[\e[1;92m\]\$>\[\e[m\] \[\e[1;0m\]'
+
+#export PS1='\u at \h in \w$(hg_ps1)\n$ '
 
 # PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
