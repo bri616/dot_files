@@ -13,7 +13,7 @@ hg_ps1() {
 
 # Change the color/look of prompt
 #export PS1='\h:\W\$ '
-export PS1='\[\e[0;35m\]\u\[\e[m\] \[\e[1;36m\]\w\[\e[m\] \[$(__git_ps1 "<git:%s>") $(hg_ps1) \n\[\e[1;92m\]\$>\[\e[m\] \[\e[1;0m\]'
+export PS1='\[\e[0;35m\]\u\[\e[m\] \[\e[1;36m\]\w\[\e[m\] \[$(__git_ps1 "<git:%s>") $(hg_ps1) \n\[\e[1;92m\]❤\[\e[m\] \[\e[1;0m\]'
 
 #export PS1='\u at \h in \w$(hg_ps1)\n$ '
 
@@ -42,3 +42,7 @@ alias gx='gitx --all'
 alias got='git '
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
